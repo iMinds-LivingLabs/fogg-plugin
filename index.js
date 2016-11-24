@@ -4,53 +4,38 @@
  * Copyright (c) 2015 for imec.by
  */
 
-var chars = {
-  '&amp;': '&',
-  '&quot;': '"',
-  '&#39;': '\'',
-  '&lt;': '<',
-  '&gt;': '>'
-};
 
-/**
- * Escape special characters in the given string of html.
- *
- * @param  {String} html
- * @return {String}
- */
+const axios = require('axios');
+
+const user = "test-plugin";
+const REPORT_URL = "http://mupets:3000/log/report.json"
+
 module.exports = {
-  escape: function(html) {
-    if (!html) {
+  send: function(logName) {
+    if (!logName) {
       return '';
     }
 
-    var values = Object.keys(chars).map(function(key) { return chars[key]; });
-    var re = new RegExp('(' + values.join('|') + ')', 'g');
-
-    return String(html).replace(re, function(match) {
-      for (var key in chars) {
-        if (chars.hasOwnProperty(key) && chars[key] === match) {
-          return key;
+    const log = {
+      "client":"plugin-test",
+      "user":"dev.pluginTest",
+      "platform":"web",
+      "events":[
+        {
+          "timestamp": new Date().getTime(),
+          "type": logName
         }
-      }
-    });
-  },
-
-  /**
-   * Unescape special characters in the given string of html.
-   *
-   * @param  {String} html
-   * @return {String}
-   */
-  unescape: function(html) {
-    if (!html) {
-      return '';
+      ]
     }
 
-    var re = new RegExp('(' + Object.keys(chars).join('|') + ')', 'g');
-
-    return String(html).replace(re, function(match) {
-      return chars[match];
-    });
+    axios.post(REPORT_URL, log)
+      .then(function (response) {
+        console.log(response);
+        return response;
+      })
+      .catch(function (error) {
+        console.log(error);
+        return error;
+      })
   }
 };

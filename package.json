@@ -1,23 +1,31 @@
 {
-  "name": "fogg-plugin-npm",
+  "name": "fogg",
   "version": "0.1.0",
   "description": "npm library for the fogg behaviour engine (behaviourkit)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "https://janeveraert@bitbucket.org/iminds/tcbl-plugin-npm.git"
+    "url": "git+https://janeveraert@bitbucket.org/iminds/tcbl-plugin-npm.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Jan Everaert <jan.everaert@imec.be>",
   "bugs": {
     "url": "https://bitbucket.org/iminds/tcbl-plugin-npm/issues"
   },
+  "dependencies": {
+    "axios": "0.15.2",
+    "log": "1.4.0"
+  },
   "devDependencies": {
     "mocha": "~1.16.2",
     "chai": "~1.8.1"
-  }
+  },
+  "homepage": "https://bitbucket.org/iminds/tcbl-plugin-npm#readme",
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
 }
