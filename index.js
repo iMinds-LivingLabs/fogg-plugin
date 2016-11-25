@@ -15,7 +15,7 @@ const REPORT_URL = "http://mupets:3000/log/report.json"
 
 exports.sendLog = function(logName) {
   if (!logName) {
-    return '';
+    return 'please enter log name';
   }
 
   const log = {
@@ -29,7 +29,6 @@ exports.sendLog = function(logName) {
       }
     ]
   }
-
 
   axios.post(REPORT_URL, log)
     .then(function (response) {
