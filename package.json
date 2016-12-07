@@ -1,6 +1,6 @@
 {
   "name": "fogg-plugin",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "npm library for the fogg behaviour engine (behaviourkit)",
   "main": "index.js",
   "scripts": {
