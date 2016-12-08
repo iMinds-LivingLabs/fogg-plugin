@@ -1,6 +1,6 @@
 {
   "name": "fogg-plugin",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "npm library for the fogg behaviour engine (behaviourkit)",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "0.15.2",
+    "chai": "3.5.0",
     "log": "1.4.0",
     "socket.io": "1.7.1",
     "socket.io-client": "1.6.0"

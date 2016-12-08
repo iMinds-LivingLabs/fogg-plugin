@@ -1,6 +1,8 @@
 const should = require('chai').should(),
+    expect = require('chai').expect,
     fogg = require('../index'),
-    send = fogg.send,
+    setup = fogg.setup,
+    connect = fogg.connect,
     display = fogg.display;
 
 const Log = require('log')
@@ -8,20 +10,15 @@ const Log = require('log')
 
 
 
-describe('#send', function() {
-  it('send basic log', function() {
-    const testLog = {
-      "client":"mupets-admin",
-      "user":"dev.ASMTesters",
-      "platform":"web",
-      "events":[
-        {
-          "timestamp": new Date().getTime(),
-          "type":"test.001"
-        }
-      ]
-    }
-    send(testLog).should.be.an('object');
-  });
 
+describe('#display', function() {
+  it('displaying feedback', function(done) {
+    try {
+      expect(display()).to.equal("true");
+    } 
+    catch (error) {
+      done(error);
+    }
+  });
 });
+
