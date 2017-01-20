@@ -30,10 +30,22 @@ const style = (function() {
     "fontFamily": "sans-serif"
   }
 
+  const loggedinDot = {
+    position: 'fixed',
+    width: '10px',
+    height: '10px',
+    borderRadius: '50%',
+    backgroundColor: '#5ABC76',
+    top: '10px',
+    left: '100%',
+    marginLeft: '-20px'
+  }
+
   return {
     divStyle: divStyle,
     imgStyle: imgStyle,
-    pStyle: pStyle
+    pStyle: pStyle,
+    loggedinDot: loggedinDot
   }
 })();
 
