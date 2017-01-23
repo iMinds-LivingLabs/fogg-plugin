@@ -1,6 +1,6 @@
 {
   "name": "fogg-plugin",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "npm library for the fogg behaviour engine (behaviourkit)",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://janeveraert@bitbucket.org/iminds/tcbl-plugin-npm.git"
   },
-  "keywords": [],
+  "keywords": ["behaviour", "behaviourkit", "fogg", "tcbl" ],
   "author": "Jan Everaert <jan.everaert@imec.be>",
   "bugs": {
     "url": "https://bitbucket.org/iminds/tcbl-plugin-npm/issues"

@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.2.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.9
+3 info using node@v7.2.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/jeveraer/Documents/code/tcbl-plugin',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/jeveraer/.npm/fogg-plugin/0.2.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/jeveraer/.npm correctMkdir not in flight; initializing
+10 info lifecycle fogg-plugin@0.2.0~prepublish: fogg-plugin@0.2.0
+11 silly lifecycle fogg-plugin@0.2.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/jeveraer/.npm/fogg-plugin/0.2.0/package.tgz',
+12 verbose tar pack   '/Users/jeveraer/Documents/code/tcbl-plugin' ]
+13 verbose tarball /Users/jeveraer/.npm/fogg-plugin/0.2.0/package.tgz
+14 verbose folder /Users/jeveraer/Documents/code/tcbl-plugin
+15 verbose addLocalTarball adding from inside cache /Users/jeveraer/.npm/fogg-plugin/0.2.0/package.tgz
+16 verbose correctMkdir /Users/jeveraer/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd fogg-plugin@0.2.0
+18 verbose afterAdd /Users/jeveraer/.npm/fogg-plugin/0.2.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/jeveraer/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/jeveraer/.npm/fogg-plugin/0.2.0/package/package.json written
+21 silly publish { name: 'fogg-plugin',
+21 silly publish   version: '0.2.0',
+21 silly publish   description: 'npm library for the fogg behaviour engine (behaviourkit)',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'make test' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://janeveraert@bitbucket.org/iminds/tcbl-plugin-npm.git' },
+21 silly publish   keywords: [ 'behaviour', 'behaviourkit', 'fogg', 'tcbl' ],
+21 silly publish   author: { name: 'Jan Everaert', email: 'jan.everaert@imec.be' },
+21 silly publish   bugs: { url: 'https://bitbucket.org/iminds/tcbl-plugin-npm/issues' },
+21 silly publish   dependencies:
+21 silly publish    { axios: '0.15.2',
+21 silly publish      chai: '3.5.0',
+21 silly publish      log: '1.4.0',
+21 silly publish      'socket.io': '1.7.1',
+21 silly publish      'socket.io-client': '1.6.0' },
+21 silly publish   devDependencies: { mocha: '~1.16.2', chai: '~1.8.1' },
+21 silly publish   homepage: 'https://bitbucket.org/iminds/tcbl-plugin-npm#readme',
+21 silly publish   directories: { test: 'test' },
+21 silly publish   license: 'ISC',
+21 silly publish   readme: 'Fogg-plugin\n=========\n\nA frontend plugin to connect to the Fogg behaviour engine \n\n\n## Installation\n\n```shell\n  npm install fogg-plugin --save\n```\n\n## Usage\n\n```js\n\n```\n\n## Tests\n\n```shell\n   npm test\n```\n\n\n## Release History\n\n* 0.1.0 Initial release\n* 0.1.6 adding user feedback\n* 0.1.12 Adding login functionality, compatible with server\n\n## dev notes\n\nDon\'t forget to log in the user once he has been logged in on the client side. This will identify the socket connection for feedback\n\n## work to be done \n\n* respond wih promise\n* allow users to configurate\n* send back rewards\n* display reward\n* handle flawed logs\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '66214af8cf22fafd060300519338ff6a9d144a56',
+21 silly publish   _id: 'fogg-plugin@0.2.0',
+21 silly publish   _shasum: '2e68c583c3d7f1eba0adbfee24cedec9849b417a',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name fogg-plugin
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'fogg-plugin',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'fogg-plugin',
+26 silly mapToRegistry   name: 'fogg-plugin',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/fogg-plugin
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/jeveraer/.npm/fogg-plugin/0.2.0/package.tgz
+30 verbose stack Error: "toString()" failed
+30 verbose stack     at Buffer.toString (buffer.js:513:11)
+30 verbose stack     at CachingRegistryClient.putFirst (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:97:23)
+30 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:54:14
+30 verbose stack     at ConcatStream.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/index.js:36:43)
+30 verbose stack     at emitNone (events.js:91:20)
+30 verbose stack     at ConcatStream.emit (events.js:185:7)
+30 verbose stack     at finishMaybe (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:475:14)
+30 verbose stack     at endWritable (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:485:3)
+30 verbose stack     at ConcatStream.Writable.end (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:455:41)
+30 verbose stack     at ReadStream.onend (_stream_readable.js:511:10)
+31 verbose cwd /Users/jeveraer/Documents/code/tcbl-plugin
+32 error Darwin 15.6.0
+33 error argv "/usr/local/Cellar/node/7.2.0/bin/node" "/usr/local/bin/npm" "publish"
+34 error node v7.2.0
+35 error npm  v3.10.9
+36 error "toString()" failed
+37 error If you need help, you may report this error at:
+37 error     <https://github.com/npm/npm/issues>
+38 verbose exit [ 1, true ]

@@ -27,6 +27,7 @@ const style = (function() {
     color: "#aaa",
     margin: "10px",
     height: "80px",
+    width: "180px",
     "fontFamily": "sans-serif"
   }
 
